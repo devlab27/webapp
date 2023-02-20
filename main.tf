@@ -23,7 +23,7 @@ variable "tags" {
 
 
 variable "user" {
-  default = "ayse"
+  default = "ec2-user"
   
 }
 # Attach ec2 role
@@ -70,6 +70,7 @@ resource "aws_iam_instance_profile" "jenkins-project-profile" {
  role = aws_iam_role.ec2_role.name 
 
 }
+# ec2 instance
 resource "aws_instance" "managed_nodes" {
   ami = "ami-0ceecbb0f30a902a6"
   count = 3
