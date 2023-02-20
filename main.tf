@@ -23,7 +23,7 @@ variable "tags" {
 
 
 variable "user" {
-  default = "ayse"
+  default = "ec2"
   
 }
 
